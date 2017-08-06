@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6520E12D-09EB-4D24-B23B-F2D160B82D4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VideoRent.My.MyApplication</StartupObject>
+    <RootNamespace>VideoRent</RootNamespace>
+    <AssemblyName>VideoRent</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VideoRent.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VideoRent.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatalogMod.vb" />
+    <Compile Include="category_tb.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CollapsiblePanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="copyOfForm.vb" />
+    <Compile Include="cover_images.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ADatabase.vb" />
+    <Compile Include="DAL\CommandTextValidator.vb" />
+    <Compile Include="DAL\DatabaseConnectionType.vb" />
+    <Compile Include="DAL\DatabaseFactory.vb" />
+    <Compile Include="DAL\DataSetCrud.vb" />
+    <Compile Include="DAL\FilterType.vb" />
+    <Compile Include="DAL\GenEnRepository.vb" />
+    <Compile Include="DAL\IGenRepository.vb" />
+    <Compile Include="DAL\IRepository.vb" />
+    <Compile Include="DAL\MovieFilters.vb" />
+    <Compile Include="DAL\MySqlDatabaseBuilder.vb" />
+    <Compile Include="DAL\MySqlDB.vb" />
+    <Compile Include="Database.vb" />
+    <Compile Include="DeleteForm.Designer.vb">
+      <DependentUpon>DeleteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic.vb" />
+    <Compile Include="employee.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailGUI.xaml.vb">
+      <DependentUpon>MailGUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MembersForm.designer.vb">
+      <DependentUpon>MembersForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MembersForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListViewGroupSorter.vb" />
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Registration.vb" />
+    <Compile Include="movie_copies.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="movy.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="payment.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentModule.vb" />
+    <Compile Include="penalty_cost.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rate.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.vb">
+      <DependentUpon>RegistrationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rental.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="renting_cost.vb">
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StandardFunctions.vb" />
+    <Compile Include="VideoDatabase.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VideoDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VideoDatabase.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VideoDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoDatabase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VideoDatabase.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeleteForm.resx">
+      <DependentUpon>DeleteForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembersForm.resx">
+      <DependentUpon>MembersForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\connSettings.config">
+      <Link>connSettings.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="VideoDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VideoDatabase.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="VideoDatabase.edmx.diagram">
+      <DependentUpon>VideoDatabase.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotPass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\ItemTemplatesCache\VisualBasic\MySQL\VBWinform_ItemTemplate.zip\Resources\bindingNavigatorAddNewItem.Image.png">
+      <Link>Resources\bindingNavigatorAddNewItem.Image.png</Link>
+    </Content>
+    <Content Include="..\..\..\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\ItemTemplatesCache\VisualBasic\MySQL\VBWinform_ItemTemplate.zip\Resources\bindingNavigatorDeleteItem.Image.png">
+      <Link>Resources\bindingNavigatorDeleteItem.Image.png</Link>
+    </Content>
+    <Content Include="..\..\..\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\ItemTemplatesCache\VisualBasic\MySQL\VBWinform_ItemTemplate.zip\Resources\bindingNavigatorMoveFirstItem.Image.png">
+      <Link>Resources\bindingNavigatorMoveFirstItem.Image.png</Link>
+    </Content>
+    <Content Include="..\..\..\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\ItemTemplatesCache\VisualBasic\MySQL\VBWinform_ItemTemplate.zip\Resources\bindingNavigatorMoveLastItem.Image.png">
+      <Link>Resources\bindingNavigatorMoveLastItem.Image.png</Link>
+    </Content>
+    <Content Include="..\..\..\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\ItemTemplatesCache\VisualBasic\MySQL\VBWinform_ItemTemplate.zip\Resources\bindingNavigatorMoveNextItem.Image.png">
+      <Link>Resources\bindingNavigatorMoveNextItem.Image.png</Link>
+    </Content>
+    <Content Include="..\..\..\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\ItemTemplatesCache\VisualBasic\MySQL\VBWinform_ItemTemplate.zip\Resources\bindingNavigatorMovePreviousItem.Image.png">
+      <Link>Resources\bindingNavigatorMovePreviousItem.Image.png</Link>
+    </Content>
+    <Content Include="..\..\..\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\ItemTemplatesCache\VisualBasic\MySQL\VBWinform_ItemTemplate.zip\Resources\bindingNavigatorSaveItem.Image.png">
+      <Link>Resources\bindingNavigatorSaveItem.Image.png</Link>
+    </Content>
+    <None Include="Resources\collapse.png" />
+    <None Include="Resources\expand.png" />
+    <Content Include="VideoDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VideoDatabase.edmx</DependentUpon>
+      <LastGenOutput>VideoDatabase.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="VideoDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VideoDatabase.edmx</DependentUpon>
+      <LastGenOutput>VideoDatabase.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MailGUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

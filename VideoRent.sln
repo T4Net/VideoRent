@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VideoRent", "VideoRent\VideoRent.vbproj", "{6520E12D-09EB-4D24-B23B-F2D160B82D4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailApplication", "MailApplication\MailApplication.csproj", "{A1336A63-E013-4941-B64B-9EADB141D6AD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VideoRentTest", "VideoRentTest\VideoRentTest.vbproj", "{BFE51928-355E-4825-9A25-AFBD70EA53D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6520E12D-09EB-4D24-B23B-F2D160B82D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6520E12D-09EB-4D24-B23B-F2D160B82D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6520E12D-09EB-4D24-B23B-F2D160B82D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6520E12D-09EB-4D24-B23B-F2D160B82D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1336A63-E013-4941-B64B-9EADB141D6AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1336A63-E013-4941-B64B-9EADB141D6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1336A63-E013-4941-B64B-9EADB141D6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1336A63-E013-4941-B64B-9EADB141D6AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFE51928-355E-4825-9A25-AFBD70EA53D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE51928-355E-4825-9A25-AFBD70EA53D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE51928-355E-4825-9A25-AFBD70EA53D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE51928-355E-4825-9A25-AFBD70EA53D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\bin\Debug\VideoRent.exe.config
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\bin\Debug\VideoRent.exe
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\bin\Debug\VideoRent.pdb
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\bin\Debug\VideoRent.xml
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.Resources.resources
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.vbproj.GenerateResource.Cache
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.exe
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.xml
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.pdb
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.RegistrationForm.resources
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.DeleteForm.resources
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.MainForm.resources
+C:\Users\Anna\Documents\Visual Studio 2013\Projects\VB.NET\FinalApplication_Polytechnics\VideoRent\VideoRent\obj\Debug\VideoRent.LoginForm.resources
+C:\Stuff\VideoRent\VideoRent\bin\Debug\connSettings.config
+C:\Stuff\VideoRent\VideoRent\bin\Debug\VideoRent.exe
+C:\Stuff\VideoRent\VideoRent\bin\Debug\VideoRent.pdb
+C:\Stuff\VideoRent\VideoRent\bin\Debug\VideoRent.xml
+C:\Stuff\VideoRent\VideoRent\bin\Debug\EntityFramework.dll
+C:\Stuff\VideoRent\VideoRent\bin\Debug\MySql.Data.dll
+C:\Stuff\VideoRent\VideoRent\bin\Debug\EntityFramework.xml
+C:\Stuff\VideoRent\VideoRent\bin\Debug\MySql.Data.xml
+C:\Stuff\VideoRent\VideoRent\obj\Debug\MailGUI.g.vb
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent_Content.g.vb
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent_MarkupCompile.cache
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent_MarkupCompile.lref
+C:\Stuff\VideoRent\VideoRent\obj\Debug\MailGUI.baml
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.g.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.DeleteForm.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.Form1.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.MembersForm.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.MainForm.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.LoginForm.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.Resources.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.RegistrationForm.resources
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.vbproj.GenerateResource.Cache
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.exe
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.xml
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.pdb
+C:\Stuff\VideoRent\VideoRent\obj\Debug\VideoRent.vbprojResolveAssemblyReference.cache
+C:\Stuff\VideoRent\VideoRent\bin\Debug\VideoRent.exe.config

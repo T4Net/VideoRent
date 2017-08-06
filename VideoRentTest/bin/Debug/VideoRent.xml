@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VideoRent
+</name>
+</assembly>
+<members>
+<member name="T:VideoRent.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:VideoRent.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:VideoRent.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:VideoRent.My.Resources.Resources.collapse">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VideoRent.My.Resources.Resources.expand">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VideoRent.My.Resources.Resources.NotPass">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:VideoRent.MailGUI">
+<summary>
+MailGUI
+</summary>
+</member>
+<member name="M:VideoRent.MailGUI.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

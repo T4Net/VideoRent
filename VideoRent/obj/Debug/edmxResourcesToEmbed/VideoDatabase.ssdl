@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="video_dbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="category_tb">
+    <Key>
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Name="categoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movieID" Type="int" Nullable="false" />
+    <Property Name="category" Type="enum" Nullable="false" />
+    <Property Name="penalty" Type="int" Nullable="false" />
+    <Property Name="dateAdded" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.video_db.cover_images' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="cover_images">
+    <Key>
+      <PropertyRef Name="movieID" />
+      <PropertyRef Name="title" />
+    </Key>
+    <Property Name="movieID" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="65" Nullable="false" />
+    <Property Name="image" Type="blob" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="employeeID" />
+    </Key>
+    <Property Name="employeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employee_name" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="employee_surname" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="salt" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="passcode" Type="varchar" MaxLength="24" />
+  </EntityType>
+  <EntityType Name="members">
+    <Key>
+      <PropertyRef Name="memberID" />
+    </Key>
+    <Property Name="memberID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="45" />
+    <Property Name="zip" Type="varchar" MaxLength="10" />
+    <Property Name="street" Type="varchar" MaxLength="45" />
+    <Property Name="number" Type="varchar" MaxLength="10" />
+    <Property Name="email" Type="varchar" MaxLength="45" />
+    <Property Name="currentlyHiring" Type="tinyint" />
+    <Property Name="balance" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="picture" Type="blob" />
+  </EntityType>
+  <EntityType Name="movie_copies">
+    <Key>
+      <PropertyRef Name="CopyID" />
+    </Key>
+    <Property Name="CopyID" Type="int" Nullable="false" />
+    <Property Name="movieID" Type="int" Nullable="false" />
+    <Property Name="condition" Type="enum" Nullable="false" />
+    <Property Name="comments" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="movies">
+    <Key>
+      <PropertyRef Name="movieID" />
+    </Key>
+    <Property Name="movieID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="65" Nullable="false" />
+    <Property Name="year" Type="year" />
+    <Property Name="language" Type="varchar" MaxLength="30" />
+    <Property Name="country" Type="varchar" MaxLength="30" />
+    <Property Name="availableCopies" Type="int" />
+    <Property Name="oscar" Type="enum" />
+    <Property Name="genre" Type="set" />
+    <Property Name="rentalRate" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="penalty" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="category" Type="enum" />
+  </EntityType>
+  <EntityType Name="payment">
+    <Key>
+      <PropertyRef Name="paymentID" />
+    </Key>
+    <Property Name="paymentID" Type="usmallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberID" Type="int" Nullable="false" />
+    <Property Name="rentID" Type="uint" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="paymentDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="penalty_cost">
+    <Key>
+      <PropertyRef Name="penaltyId" />
+    </Key>
+    <Property Name="penaltyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Hot" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Medium" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Low" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="date" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="rate">
+    <Key>
+      <PropertyRef Name="rateId" />
+    </Key>
+    <Property Name="rateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Hot" Type="int" />
+    <Property Name="Medium" Type="int" />
+    <Property Name="Low" Type="int" />
+  </EntityType>
+  <EntityType Name="rentals">
+    <Key>
+      <PropertyRef Name="rentID" />
+    </Key>
+    <Property Name="rentID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CopyID" Type="int" Nullable="false" />
+    <Property Name="rentalDate" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="returnDate" Type="datetime" Precision="0" />
+    <Property Name="memberID" Type="int" />
+    <Property Name="employeeID" Type="int" Nullable="false" />
+    <Property Name="rentalTime" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="currentlyHiring" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="renting_cost">
+    <Key>
+      <PropertyRef Name="costId" />
+    </Key>
+    <Property Name="costId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Hot" Type="int" Nullable="false" />
+    <Property Name="Medium" Type="int" Nullable="false" />
+    <Property Name="Low" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="member_fk">
+    <End Role="members" Type="Self.members" Multiplicity="0..1" />
+    <End Role="rentals" Type="Self.rentals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="memberID" />
+      </Principal>
+      <Dependent Role="rentals">
+        <PropertyRef Name="memberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="movieIDs">
+    <End Role="movies" Type="Self.movies" Multiplicity="1" />
+    <End Role="movie_copies" Type="Self.movie_copies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="movies">
+        <PropertyRef Name="movieID" />
+      </Principal>
+      <Dependent Role="movie_copies">
+        <PropertyRef Name="movieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="payment_member">
+    <End Role="members" Type="Self.members" Multiplicity="1" />
+    <End Role="payment" Type="Self.payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="memberID" />
+      </Principal>
+      <Dependent Role="payment">
+        <PropertyRef Name="memberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'title_fk' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="title_fk" />-->
+  <Function Name="ChangeCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="video_db">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="colName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CheckRentalStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="video_db" />
+  <EntityContainer Name="video_dbModelStoreContainer">
+    <EntitySet Name="category_tb" EntityType="Self.category_tb" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="members" EntityType="Self.members" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="movie_copies" EntityType="Self.movie_copies" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="movies" EntityType="Self.movies" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="payment" EntityType="Self.payment" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="penalty_cost" EntityType="Self.penalty_cost" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="rate" EntityType="Self.rate" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="rentals" EntityType="Self.rentals" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="renting_cost" EntityType="Self.renting_cost" Schema="video_db" store:Type="Tables" />
+    <EntitySet Name="cover_images" EntityType="Self.cover_images" store:Type="Tables" store:Schema="video_db">
+      <DefiningQuery>SELECT
+`cover_images`.`movieID`, 
+`cover_images`.`title`, 
+`cover_images`.`image`
+FROM `cover_images` AS `cover_images`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="member_fk" Association="Self.member_fk">
+      <End Role="members" EntitySet="members" />
+      <End Role="rentals" EntitySet="rentals" />
+    </AssociationSet>
+    <AssociationSet Name="movieIDs" Association="Self.movieIDs">
+      <End Role="movies" EntitySet="movies" />
+      <End Role="movie_copies" EntitySet="movie_copies" />
+    </AssociationSet>
+    <AssociationSet Name="payment_member" Association="Self.payment_member">
+      <End Role="members" EntitySet="members" />
+      <End Role="payment" EntitySet="payment" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="video_dbModelStoreContainer" CdmEntityContainer="video_dbEntities">
+    <EntitySetMapping Name="category_tb">
+      <EntityTypeMapping TypeName="video_dbModel.category_tb">
+        <MappingFragment StoreEntitySet="category_tb">
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="penalty" ColumnName="penalty" />
+          <ScalarProperty Name="dateAdded" ColumnName="dateAdded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="video_dbModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+          <ScalarProperty Name="employee_surname" ColumnName="employee_surname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="salt" ColumnName="salt" />
+          <ScalarProperty Name="passcode" ColumnName="passcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members">
+      <EntityTypeMapping TypeName="video_dbModel.member">
+        <MappingFragment StoreEntitySet="members">
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="memberID" ColumnName="memberID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="currentlyHiring" ColumnName="currentlyHiring" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="movie_copies">
+      <EntityTypeMapping TypeName="video_dbModel.movie_copies">
+        <MappingFragment StoreEntitySet="movie_copies">
+          <ScalarProperty Name="CopyID" ColumnName="CopyID" />
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="movies">
+      <EntityTypeMapping TypeName="video_dbModel.movy">
+        <MappingFragment StoreEntitySet="movies">
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="availableCopies" ColumnName="availableCopies" />
+          <ScalarProperty Name="oscar" ColumnName="oscar" />
+          <ScalarProperty Name="genre" ColumnName="genre" />
+          <ScalarProperty Name="rentalRate" ColumnName="rentalRate" />
+          <ScalarProperty Name="penalty" ColumnName="penalty" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payments">
+      <EntityTypeMapping TypeName="video_dbModel.payment">
+        <MappingFragment StoreEntitySet="payment">
+          <ScalarProperty Name="paymentID" ColumnName="paymentID" />
+          <ScalarProperty Name="memberID" ColumnName="memberID" />
+          <ScalarProperty Name="rentID" ColumnName="rentID" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="penalty_cost">
+      <EntityTypeMapping TypeName="video_dbModel.penalty_cost">
+        <MappingFragment StoreEntitySet="penalty_cost">
+          <ScalarProperty Name="penaltyId" ColumnName="penaltyId" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="Medium" ColumnName="Medium" />
+          <ScalarProperty Name="Low" ColumnName="Low" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rates">
+      <EntityTypeMapping TypeName="video_dbModel.rate">
+        <MappingFragment StoreEntitySet="rate">
+          <ScalarProperty Name="rateId" ColumnName="rateId" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="Medium" ColumnName="Medium" />
+          <ScalarProperty Name="Low" ColumnName="Low" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rentals">
+      <EntityTypeMapping TypeName="video_dbModel.rental">
+        <MappingFragment StoreEntitySet="rentals">
+          <ScalarProperty Name="rentID" ColumnName="rentID" />
+          <ScalarProperty Name="CopyID" ColumnName="CopyID" />
+          <ScalarProperty Name="rentalDate" ColumnName="rentalDate" />
+          <ScalarProperty Name="returnDate" ColumnName="returnDate" />
+          <ScalarProperty Name="memberID" ColumnName="memberID" />
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="rentalTime" ColumnName="rentalTime" />
+          <ScalarProperty Name="currentlyHiring" ColumnName="currentlyHiring" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="renting_cost">
+      <EntityTypeMapping TypeName="video_dbModel.renting_cost">
+        <MappingFragment StoreEntitySet="renting_cost">
+          <ScalarProperty Name="costId" ColumnName="costId" />
+          <ScalarProperty Name="Hot" ColumnName="Hot" />
+          <ScalarProperty Name="Medium" ColumnName="Medium" />
+          <ScalarProperty Name="Low" ColumnName="Low" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cover_images">
+      <EntityTypeMapping TypeName="video_dbModel.cover_images">
+        <MappingFragment StoreEntitySet="cover_images">
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ChangeCategory" FunctionName="video_dbModel.Store.ChangeCategory" />
+  </EntityContainerMapping>
+</Mapping>
