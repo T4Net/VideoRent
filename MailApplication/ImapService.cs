@@ -82,7 +82,7 @@ namespace MailApplication
                     folders.Add(new EmailFolder { Title = folder.Name });
                 }
              }          
-                MessageBox.Show("no of folders " + folders.Count);
+                //MessageBox.Show("no of folders " + folders.Count);
 
             // Before returning start the idling
             //client.Folders.Inbox.StartIdling(); // And continue to listen for more.
@@ -97,11 +97,11 @@ namespace MailApplication
         //            MessageBox.Show($"A new message was downloaded in {e.Folder.Name} folder.");
         //        }
 
-        //        public static MessageCollection GetMessagesForFolder(string name)
-        //        {
-        //            client.Folders[name].Messages.Download(); // Start the download process;
-        //            return client.Folders[name].Messages;
-        //        }
+        public static MessageCollection GetMessagesForFolder(string name)
+        {
+            client.Folders[name].Messages.Download(); // Start the download process;
+            return client.Folders[name].Messages;
+        }
         //    }
     }
 }

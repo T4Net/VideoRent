@@ -84,14 +84,14 @@ Public Class LoginForm
         'config.ConnectionStrings.SectionInformation.ProtectSection(Nothing)
         '' We must save the changes to the configuration file.
         'config.Save(ConfigurationSaveMode.Full, True)
-        'Dim sectionXml As String = _
+        'Dim sectionXml As String =
         'section.SectionInformation.GetRawXml()
         'Console.WriteLine(sectionXml)
     End Sub
 
     Private Sub LoginForm1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         YouShallNotPicture.Visible = False
-        'CloseConfigEncryption("VideoRent.exe")
+        CloseConfigEncryption("VideoRent.exe")
     End Sub
 
     'https://stackoverflow.com/questions/29183301/unable-to-verify-bcrypt-hashed-password-from-mysql-with-vb-net

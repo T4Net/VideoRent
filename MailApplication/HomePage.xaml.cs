@@ -30,7 +30,22 @@ namespace MailApplication
 
             foldersList.ItemsSource = ImapService.GetFolders();
 
-            //ClearRoom();
+            ClearRoom();
+        }
+
+        public static void ClearRoom()
+        {
+            // Add an initial content
+            StackPanel panel = new StackPanel();
+            panel.Children.Add(new TextBlock
+            {
+                Text = "Navigate anywhere.",
+                FontSize = 20,
+                Width = 200,
+                Height = 50
+            });
+
+            ContentFrame.Content = panel;
         }
 
         private void foldersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -46,7 +61,7 @@ namespace MailApplication
 
         private void loadFolder(string name)
         {
-            //ContentFrame.Content = new FolderMessagesPage(name);
+            ContentFrame.Content = new FolderMessagesPage(name);
         }
     }
 }

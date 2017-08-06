@@ -101,8 +101,8 @@ Module Mod_Registration
             config.Save()
 
             ConfigurationManager.RefreshSection("connectionStrings")
-            Console.WriteLine("Protected={0}", _
-            section.SectionInformation.IsProtected)
+            'Console.WriteLine("Protected={0}", _
+            'section.SectionInformation.IsProtected)
 
         Catch ex As Exception
             Console.WriteLine(ex.Message)

@@ -28,6 +28,7 @@ namespace MailApplication
         {
             InitializeComponent();
             MainFrame = mainFrame;
+            this.Closed += new EventHandler(MainWindow_Closed);
             // Add this on application startup, remember to change the path
             //Debugging ImapX          
             System.Diagnostics.Debug.Listeners.Add(new System.Diagnostics.TextWriterTraceListener(
@@ -37,7 +38,7 @@ namespace MailApplication
             MainFrame.Content = new LoginPage();
 
             // Initialize the Imap
-            //ImapService.Initialize();
+            ImapService.Initialize();
         }
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
@@ -83,6 +84,11 @@ namespace MailApplication
                 panelError.Visibility = System.Windows.Visibility.Visible;
                 errorText.Text = "You're not logged in!";//"There was a problem logging you in to Google Mail.";
             }
+        }
+
+        void MainWindow_Closed(object sender, EventArgs e)
+        {
+            ImapService.Logout();
         }
         //    public MainWindow()
         //    {

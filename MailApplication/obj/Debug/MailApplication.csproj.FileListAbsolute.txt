@@ -19,3 +19,7 @@ C:\Stuff\VideoRent\MailApplication\obj\Debug\MailApplication.csproj.GenerateReso
 C:\Stuff\VideoRent\MailApplication\obj\Debug\MailApplication.exe
 C:\Stuff\VideoRent\MailApplication\obj\Debug\MailApplication.pdb
 C:\Stuff\VideoRent\MailApplication\obj\Debug\MailApplication.csprojResolveAssemblyReference.cache
+C:\Stuff\VideoRent\MailApplication\obj\Debug\MessagePage.g.cs
+C:\Stuff\VideoRent\MailApplication\obj\Debug\MessagePage.baml
+C:\Stuff\VideoRent\MailApplication\obj\Debug\CreateAndSend.g.cs
+C:\Stuff\VideoRent\MailApplication\obj\Debug\CreateAndSend.baml
